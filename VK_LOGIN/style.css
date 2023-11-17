@@ -1,0 +1,313 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 
+    шапка: #222222
+    Фон: #141414
+    input #333333
+*/
+body{
+    background-color: #141414;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    width: 960px;
+    height: 850px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    padding-left: 10px;
+    height: 49px;
+    width: 100%;
+    background: #222;
+}
+    .logo{
+        margin: 0 auto;
+        width: 960px;
+        display: flex;
+        padding-block: 11px;
+    }
+    .logo img.logo_vk{
+        width: 26px;
+        height: 26px;
+        border-radius: 7px;
+    }
+    .logo .logo_text{
+        display: flex;
+        align-items: center;
+    }
+    .logo img.logo_text_size{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        width: 114px;
+        height: 13px;
+        justify-content: center;
+    }
+
+/* Основная часть ___________________________________ */
+
+.content{
+    padding: 18px 0 36px 0;
+}
+    .content_main{
+        /* width: 628px; */
+        height: 624px;
+        display: flex;
+    }
+        .content_left{
+            margin-right: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            .left_info{
+                text-align: center;
+            }   
+                .info_size{
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                }
+            .left_phone{
+                padding-block: 32px;
+            }
+                .phone_size{
+                    align-items: center;
+                }
+                    .firstPhone{
+                        position: relative;
+                        left: 20px;
+                    }
+                    .secondPhone{
+                        position: relative;
+                        right: 20px;
+                        top: 12px;
+                    }
+            .left_links{
+            }   
+                .links_size{
+                    height: 31px;
+                    cursor:default;
+                }
+                .links_size a{
+                    color: #e1e3e6;
+                    padding-block: 10px;
+                }
+                .links_size a:hover{
+                    padding-block: 10px;
+                    border-radius: 12px;
+                    background: #3c3c3c;
+                }
+                .link-style{
+                    height: 100%;
+                    padding-inline: 10px;
+                }
+
+            .links_products{        /*Все продукты >*/
+                font-size: 13px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .links_products a{
+                font-weight: normal;
+                color: #71AAEB;
+            }
+            .links_products a:hover{
+                text-decoration: underline;
+            }
+
+.login_head{
+    background: #222;
+    padding: 32px 24px;
+    border-radius: 12px;
+    width: 319px;
+    height: 416px;
+    color: #e1e3e6;
+}
+    .VkIdForm__icon{
+        text-align: center;
+    }
+    .VkIdForm__header{
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 16px;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    .VkIdForm__form{
+        max-width: 272px;
+        max-height: 252px;
+    }
+        .VkIdForm__input {
+            box-sizing: border-box;
+            width: 100%;
+            height: 36px;
+            padding: 8px 12px;
+            line-height: 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.16);
+            text-overflow: ellipsis;
+            background-color: #333333;
+            font-size:13px;
+            
+        }
+            input{
+                color: white;
+                
+            }
+            input[type="text"]:focus{
+                outline: 1px solid #71AAEB;
+            }
+            
+                .VkIdCheckBox{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 12px;
+                    display: flex;
+                    gap: 3px;
+                }
+                    .VkIdCheckBox p{
+                        display: flex;
+                        align-items: center;
+                        color: #828282;
+                        font-size: 13px;
+                    }
+                    .galochkaOFF{
+                        cursor: pointer;
+                    }
+                    .galochkaON{
+                        cursor: pointer;
+                        display: none; /* galochkaOFF это выключенная*/
+                    }
+                    
+                    
+    .VkIdForm__button{
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+    
+        button.VkIdForm_button_enter{
+            border-radius: 8px;
+            border: 0 solid;
+            height: 32px;
+            width: 100%;
+            cursor: pointer;
+        }
+            .VkIdForm_button_enter a{
+                color: #222222;
+            }
+            button:hover {
+                filter: brightness(90%);
+            }
+
+    .VkIdForm__qrPanel{
+        padding-top: 20px;
+        margin-top: 24px;
+        margin-bottom: -8px;
+        border-top: 0.5px solid rgba(255,255,255,0.1);
+        /* max-width: 272px;
+        height: 80px; */
+        position: relative;
+        display: flex;
+    }
+        .qePanel__qrcode{
+            width: 75px;
+            height: 75px;
+            border-radius: 8px;
+            background: white;
+            padding: 8px;
+        }
+            .qePanel__qrcode svg{
+                height: 60px;
+            }
+
+        .qrPanel__text{
+            display: flex;
+            flex-direction: column;
+            line-height: 23px;
+            margin-left: 10px;
+        }        
+        .qrPanel_more{
+            font-size: 13px;
+            color: #71AAEB;
+        }
+            .qrPanel_more:hover{
+                text-decoration:underline;
+            }
+
+            /* ЗАРЕГИСТРИРОВАТЬСЯ */
+
+
+.login_footer{
+    margin-top: 16px;
+    padding: 32px 24px;
+    background: #222;
+    border-radius: 12px;
+}
+    .login_footer_registartion{
+    }
+        button.login_button_registr{
+            background: #4bb34b;
+            color: white;
+            border-radius: 8px;
+            border: 0 solid;
+            height: 32px;
+            width: 100%;
+            cursor: pointer;
+        }
+    .login_footer {
+        text-align: center;
+        font-size: 12px;
+        color: #656565;
+        line-height: 18px;
+    }
+    .login_footer p{
+        margin-top: 12px;
+    }
+    .login_footer a{
+        font-size: 13px;
+        color: #939393;
+        text-align: center;
+    }
+    .login_recomendation{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .login_recomendation a:hover{
+        text-decoration: underline;
+    }
+    /* футер */
+.content_footer{
+    padding-left: 10px;
+    margin-top: 30px;
+    font-size: 13px;
+}       
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        color: #939393;
+    }
+        .footer a{
+            color: #71AAEB;
+        }
+        .footer a:hover{
+            text-decoration: underline;
+        }
+    
+    .footer_links .bnav_a, .lang_a{
+        padding: 2px 5px;  /* добавиминетрвал между блоками в футере */
+    }

@@ -1,0 +1,38 @@
+window.addEventListener("scroll",e=> {
+    document.body.style.cssText = `--scrollTop: ${this.scrollY}px`
+})
+
+//d_______________CURSOR
+document.addEventListener('DOMContentLoaded', () => {
+  const followCursor = () => { // объявляем функцию followCursor
+    const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
+
+    window.addEventListener('mousemove', e => { // при движении курсора
+      const target = e.target // определяем, где находится курсор
+      if (!target) return
+
+      if (target.closest('a')) { // если курсор наведён на ссылку
+        el.classList.add('follow-cursor_active') // элементу добавляем активный класс
+      } else { // иначе
+        el.classList.remove('follow-cursor_active') // удаляем активный класс
+      }
+
+      el.style.left = e.pageX + 'px' // задаём элементу позиционирование слева
+      el.style.top = e.pageY + 'px' // задаём элементу позиционирование сверху
+    })
+  }
+
+  followCursor() // вызываем функцию followCursor
+
+})
+
+
+// const cursor = document.querySelector(".circle");
+// function getDimensions(e) {
+//   cursor.style.top = `${e.clientY - 25}px`; // -25px for the size of the circle
+//   cursor.style.left = `${e.clientX - 25}px`;
+// }
+
+// window.addEventListener("mousemove", (e) => {
+//   getDimensions(e);
+// });

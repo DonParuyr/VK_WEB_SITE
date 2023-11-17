@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*ширина блока с полями*/
+
+}
+:root{
+    --index: calc(1vw + 1vh); /*(ширина,высота) сделаем пропорциональный размер ширине и высоте*/
+}
+/* КУРСОР -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.follow-cursor{
+  background-color: rgba(0, 0, 0, 0);
+  /* -webkit-filter: invert(100%); */
+  /* filter: invert(100%); */
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #ffffff;
+  border-radius: 30%;
+  transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
+  position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+  z-index: 999; /* чтобы элемент был над остальными элементами */
+  pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+  transition: width 0.64s, height 0.64s, border-radius 2.64s, background 1.64s;
+}
+/* Активный класс для кружка при наведении на ссылку */ */
+.follow-cursor_active {
+  height: 128px;
+  width: 128px;
+  border-width: 2px;
+  background: rgba(255, 0, 0, 0.828);
+}
+
+/* Скрываем декоративный элемент при ширине браузера меньше 992px */
+@media (max-width: 991.98px) {
+  .follow-cursor{
+  display: none;
+  cursor: none;
+  }
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+body{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+    cursor: none; 
+    /* убираю курсор */
+}
+/* -- ПЕРВАЯ СТРАНИЦА ------------------------------------ RESEUM -- */
+.main-header{
+    position: relative;
+}
+
+.layers{
+    height: 100vh;
+    display: flex;     flex-direction: column;
+    align-items: center; /* оцентровал по вертикали*/
+    justify-content: center; /* оцентровал  по горизонтали */
+    text-align: center; /*оцентровать текст -_-, а было _--. надеюсь ты понял*/
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover; /* нельзя приближать */
+    background-position: center; /* оцентровали по гор и верт*/
+    will-change: transform;
+
+}
+.layers__base{
+    transform: translate3d(calc(var(--scrollTop)*0.2),0,0);
+    z-index: 0;
+}
+.layers__middle{
+    transform: translate3d(0,calc(var(--scrollTop)/ 3.5),0);
+}
+.layers__front{
+    transform: translate3d(0,calc(var(--scrollTop)/2),0);
+}
+.layers__header{
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    line-height: 0.8; /*интервал*/
+
+}
+.layers__caption{
+    font-size: calc(var(--index) * 5.6);
+    /* letter-spacing: calc(var(--index) / 3.5); */
+    /* margin-top: calc(var(--index) *-2); */
+    padding-right: calc(var(--index) *-9);
+}
+.layers__title{
+    font-size: calc(var(--index) * 1.6);
+    /* letter-spacing: calc(var(--index) / 2.25);; */
+}
+.layers__name{
+    padding-top: calc(var(--index));
+    background-image: url(img/border.png);
+    z-index: 1;
+    box-sizing: content-box;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    color: rgb(130, 0, 0);
+    line-height: 0.6;
+    
+    font-size: calc(var(--index) * 7.4);
+
+    background-size: calc(var(--index) * 30);
+    background-position: calc(var(--index));
+    background-repeat: no-repeat;
+}
+.posi{
+    z-index: 1;
+    padding-right: 30%;
+    transform: translate3d(calc(var(--scrollTop)*-0.2),0,0);
+    will-change: translate3d();
+}
+
+
+/* -- ВТОРАЯ СТРАНИЦА ----------------------------------- SKILL -- */
+.main-article{
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover; /* теперь хрен поломается масштаб заднего фона*/
+    background-position: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.skill{
+    font-size: calc(var(--scrollTop)*0.1);
+}
+.skill::after{
+    font-size: calc(var(--scrollTop)*-0.1);
+}
+.middle__header{
+    z-index: 3;
+    font-size: 8vh;
+    /* calc(var(--scrollTop)/5) */
+
+}
+.left_arm{
+    transform: translate3d(0,calc(var(--scrollTop)*0.1),0);
+    /* background-position: 0 20px; */
+}
+.right_arm{
+    transform: translate3d(0,calc(var(--scrollTop)*-0.1),0);
+    /* background-position: 0 -50px; */
+}
+
+
+/* -- ТРЕТЬЯ СТРАНИЦА ----------------------------------- НАПРАВЛЕНИЕ -- */
+.third__page{
+    position: relative;
+}
+.layers__position{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.layers__list{
+    /* background-color: gray; */
+    border: 3px solid #ffffff;
+    border-radius: 20px;
+    padding: 12px;
+    font-size: calc(var(--index)*1);
+}
+
+
+/* -- ЧЕТВЕРТАЯ СТРАНИЦА ------------------------------- BACKEND & FRONTEND -- */
+.pady {
+  display: block;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: calc(var(--index)*1);
+  min-height: 100vh;
+  background-color: #00153a;
+  background-image: linear-gradient(180deg, #000000 0%, #000000 100%);
+  
+  .container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 35px;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    .card {
+      position: relative;
+      /* width: 300px;
+      height: 400px; */
+      width: calc(var(--index)*19.7);
+      height: calc(var(--index)*28.7);
+      margin: 0 auto;
+      background: #000;
+      border-radius: 15px;
+      box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+
+      .face {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.face2 {
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .card:hover .face.face2 {
+      height: 60px;
+
+      h2 {
+        font-size: 2em;
+      }
+    }
+
+    .card:nth-child(1) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #000000 0%,
+        /* #2600ff 45%, */
+        #000000 100%
+      );
+      border-radius: 15px;
+      border: 3px solid #ffffff;
+    }
+
+    .card:nth-child(2) .face.face2 {
+      background-image: linear-gradient(
+        40deg,
+        #000000 0%,
+        /* #2600ff 45%, */
+        #000000 100%
+      );
+      border-radius: 15px;
+      border: 3px solid #ffffff;
+    }
+
+  }
+}
+a{
+  text-decoration: none;
+  
+  color: white;
+}
+
+/* -- ПЯТАЯ СТРАНИЦА ------------------------------- ОПЫТ -- */
+
+.experience{
+  /* position: absolute; */
+  height: 100vh;
+  min-height: 100vh;
+  background-color: rgb(55, 55, 55);
+}
+.experience__group{
+  font-size: calc(var(--index));
+}

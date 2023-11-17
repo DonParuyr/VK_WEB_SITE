@@ -1,0 +1,607 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif;
+    font-size: 2vh; */
+}
+body{
+    background: #141414;   
+}
+/*  ___________
+    Главный фон
+    background: #141414
+    _____________
+    Сообщения фон
+    background: #222222;
+    _______________________
+    Нижний фон отправки смс
+    background: #292929;
+    _____
+    рамка
+    border: 1px #363738 solid;
+    ________________
+    рамка в смс баре
+    border: 1px #555555 solid;
+
+*/
+p{
+    word-break: break-all; 
+    /* перенос ооооооооооооооо
+    ооочень длинного текста */
+}
+/* скроллбар */
+#sms_bar_view::-webkit-scrollbar{
+    margin: 10px;
+    overflow: hidden;
+    width: 5px;
+    background-color: #292929;
+    border-radius: 8px;
+}
+#sms_bar_view::-webkit-scrollbar-thumb{
+    margin: 10px;
+    border-radius: 50px;
+    background-color: rgb(57, 57, 57);
+}
+#sms_bar_view::-webkit-scrollbar-track{
+    margin: 10px;
+    border-radius: 50px;
+    background-color: #292929;
+}/* __________________________ */
+
+/* _______VK_______ */
+
+.page_header{
+    display: flex;
+    background-color: #222;
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    height: 45px;
+    /* box-shadow:0 3px rgb(255, 255, 255); */
+}
+
+.page_header_size{
+    margin-inline: 13vh;
+    /* background-color: rgb(248, 160, 45); */
+    /* width: 100%; */
+    height: 45px;
+    /* display: flex;
+    justify-content: center; */
+    margin: 0 auto;
+    /* margin-inline: 13vh; */
+}
+.page_fix{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    height: 45px;
+}
+.page_logo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    height: 45px;
+}
+.page_logo a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+.page_logo img{
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+}
+.search{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    height: 45px;
+    width: 200px;
+}
+    .search_background{
+        display: flex;
+        border-radius: 8px;
+        height: 27px;
+        border: 0 solid;
+        background-color: rgb(66, 66, 66);
+    }
+    .search_background iconify-icon{
+        z-index: 3;
+        color: #828282;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+    }
+    .search_background iconify-icon:hover{
+        filter: none;
+        cursor: text;
+    }
+
+        .search_background input{
+            z-index: 2;
+            position: absolute;
+            /* padding-left: 200px; */
+            border-radius: 8px;
+            height: 27px;
+            width: 187px;
+            border: 0 solid;
+            background-color: rgb(66, 66, 66);
+            /* width: 100%; */
+            color: rgb(169, 169, 169);
+            outline: none;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .search_background:focus{
+            background-color: rgb(78, 78, 78);
+        }
+        .search_background input:active{
+            filter: brightness(115%);
+        }
+        .search input[placeholder="Поиск"]{
+            padding-top: 2px;
+            color: #b2b2b2;
+            padding-inline: 7px;
+            padding-left: 33px;
+        }
+.bell{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 45px;
+}
+.bell:hover{
+    background-color: #333333;
+    cursor: pointer;
+}
+.music{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;    
+    margin-right: 20px;
+    height: 45px;
+}
+
+audio{
+    width: 416px;
+    height: 24px;
+    box-shadow: none;
+    text-shadow: none;
+    background-color: none;
+    outline-offset: 3px;
+
+}
+    audio::-webkit-media-controls-panel{
+        background-color: rgb(54, 54, 54);
+    }
+
+    audio::-webkit-media-controls-current-time-display{
+        text-shadow: none;
+        box-shadow: none;
+    }
+    audio::-webkit-media-controls-time-remaining-display{
+        text-shadow: none;
+        box-shadow: none;
+    }
+
+.apps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 45px;
+}
+.apps img{
+    width: 25px;
+    height: 25px;
+    /* justify-content: center;
+    align-items: center; */
+}
+.apps:hover{
+    background-color: #333333;
+    cursor: pointer;
+}
+.prof_photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 45px;
+}
+.prof_photo:hover{
+    background-color: #333333;
+    cursor: pointer;
+}
+.prof_photo img{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*   __________    LEFT BAR      */
+.main{
+    display: flex;
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+    .main_size{
+        margin-inline: 13vh;
+        margin: 0 auto;
+        width: 897px;
+        display: flex;
+    }
+
+
+.leftbar_bar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+    /* border: 2px solid white; */
+}
+
+/*    сообщение в левом баре   */
+.left_bar_message{
+    display: flex;
+}
+.left_bar_new__message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 30px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    
+    padding: 9px;
+    margin-left: 12px;
+    font-family: system-ui;
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+    background-color: #828282;
+}
+/* ___  */
+
+.iconify{
+    display: flex;
+    flex-direction: column;
+    color: rgb(113,170,235); 
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+.leftbar_bar li{
+    list-style-type: none;
+    border-radius: 7px;
+    padding: 5px;
+    width: 150px;
+    margin-right: 3px;
+}
+.leftbar_bar li .iconify{
+    margin-right: 10px;
+}
+a {
+    display: flex;
+    text-decoration: none; 
+    align-items: center;
+    color: white;
+}
+li:hover{
+    background-color: #262626;
+}
+
+
+/* middle ________ */
+.info_middle{
+    display: flex;
+    min-width: 600px;
+    border-radius: 17px;
+    /* background-color: #340e0e; */
+}
+.info_middle-left{
+    width: 450px;
+    height: 100%;
+    border-radius: 17px;
+    background-color: #222;
+
+    border: 0.01px solid rgb(61, 61, 61);
+}
+
+
+/* ______________ */
+/* SMS */
+.sms_bar_upper{
+    /* padding-top: 10px;
+    padding-inline: 10px; */
+    border-radius: 17px 17px 0px 0px;
+    border-bottom: 0.01px solid rgb(61, 61, 61);
+    justify-content: center;
+}
+.bar_upper{
+    display: flex;
+    justify-content: space-between;
+}
+.upper_left{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    padding-left: 10px;
+    color: #939393;
+}
+    .upper_left:hover{
+        border-radius: 17px 0px 0px 0px;
+        cursor: pointer;
+        background: linear-gradient(90deg, #424242, #222222);
+    }
+    .backICON {
+        display: flex;
+    }
+
+.upper_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 37px;
+}
+    .upper_name a{
+        font-style: bold;
+        cursor: pointer;
+    }
+    .upper_name p{
+        color: #939393;
+        display: flex;
+        align-items: center;
+    }
+
+.bar_upper_right{
+    display: flex;
+    color: #656565;
+    font-size: 17px;
+    padding-right: 10px;
+}
+    .iconTelephone, .iconThreePoint{
+        margin-inline: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .iconTelephone:hover, .iconThreePoint:hover{
+        color: #7e7e7e;
+        cursor: pointer;
+    }
+    .profilePhoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        height: 45px;
+    }
+    .profilePhoto:hover{
+        cursor: pointer;
+        filter: brightness(110%);
+    }
+    .sms_prof_photo img{
+        display: flex;
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+/*info middle right ______ */
+
+.info_middle_right{
+    width: 272px;
+    margin-left: 18px;
+    border-radius: inherit;
+    background-color: #222222;
+    padding: 10px;
+    padding-top: 4px;
+    border: 0.01px solid rgb(61, 61, 61);
+    height: max-content;
+}
+
+.line{
+    margin-block: 15px;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(61, 61, 61);
+}
+
+.info_middle_right_sms{
+    margin-block: 2px;
+    padding: 8px;
+    border-radius: 8px;
+}
+    .info_middle_right_sms:hover{
+        background: #333333;
+    }
+    .info_middle_right_sms1{
+        margin-block: 2px;
+        padding: 8px;
+        border-radius: inherit;
+        border-radius: 8px;
+        background: #333333;
+    }
+
+/* ______________________________  */
+
+/* ЧАТ  _________________________________________ */
+/* #sms_bar_view{
+    display: flex;
+    padding-top: 1px;
+    padding-bottom: 1vh;
+    height: 500px;
+    font-size: 1.5vh;
+    padding-inline: 20px;
+    overflow-y: auto;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+#sms_bar_view {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    font-size: 1.5vh;
+    padding-inline: 20px;
+    padding-bottom: 12px;
+    overflow-y: auto;
+    justify-content: flex-end;
+}
+    .sms{
+        padding-block: 10px;
+        display: flex;
+        width: max-content;
+        width: 403px;
+    }
+
+    .sms img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .sms .sms_bar_info{
+        font-size: 13px;
+    }
+    .sms_bar_info{
+        margin-left: 0.6vh;
+    }    
+    .sms_bar_info a{
+        color: #64aaeb;
+        font-weight:bold;
+    }
+    #sms_bar_sms{
+        font-size: 12px;
+    }
+/* ВВОД СООБЩЕНИЯ */
+.sms_bar_sendMessage{
+    display: flex;
+    justify-content: space-between;
+    background: #292929;
+    color: #656565;
+    border-top: 0.01px solid rgb(61, 61, 61);
+    border-radius: 0px 0px 17px 17px;
+    padding-block: 17px;
+    padding-inline: 10px;
+    font-size: 23px;
+}
+    .sms_send_zakrep{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sms_input{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .input_ramka{
+        display: flex;
+        width: 95%;
+        border-radius: 7px;
+        background-color: #292929;
+        border: 1px #555555 solid;
+    }
+    .input_ramka ::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+    .sms_input input{
+        border-radius: 7px;
+        width: 100%;
+        font-size: 2vh;
+        background-color: #292929;
+        border: 0 solid;
+        transition: background-color 0.2s;
+        color: white;
+    }
+        .sms_input input[type=text] {
+            font-size: 1vh;
+            padding-top: 3.5px;
+            padding-bottom: 5px;
+            padding-block: 7px;
+            padding-inline: 10px;
+            border: 0px solid #292929;
+            outline: none;
+        }
+            .sms_input input[type=text]:hover {
+                border: 0px solid rgb(132, 0, 0);
+            }
+                .input_ramka input[placeholder="Напишите сообщение..."]{
+                    font-size: 13px;
+                    padding-inline: 10px;
+                    padding-top: 5px;
+                }
+                    .sms_input input:hover{
+                        background-color: #292929;;
+                    }
+        .input_right{           /*  фото или смайлик  */
+            display: flex;
+            align-self: center;
+            justify-content: center;
+            padding-block: 5px;
+            margin-inline: 10px;
+            color: #7e7e7e;
+            font-size: 18px;
+            gap: 5px;
+        }
+            iconify-icon:hover{     /*  для всех иконок повысить яркость и pointer курсор при наведении  */
+                filter: brightness(130%);
+                cursor: pointer;
+            }
+    .sms_micro{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+    .sms_micro:hover{
+        color: #939393;
+        cursor: pointer;
+    }
+    /* #ea1dacd */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мессенджер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="../img/logoicon2.png" type="image/png">
+
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Иконки для leftbar -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Sofia+Sans+Ext">
+</head>
+<body>
+    <div class="page">
+        <div class="page_header">
+            <div class="page_header_size">
+                <div class="page_fix">
+                    <div class="page_logo">
+                        <a href="../index.html">
+                            <img src="../img/logo.jpg" alt=""><img src="../img/logotype.png" alt="" style="margin-left: 2px;width: 100px;height: auto; border-radius: 0;">
+                        </a>
+                    </div>
+                    <div class="search">
+                        <div class="search_background">
+                            <iconify-icon icon="gg:search"></iconify-icon>
+                            <input type="text" placeholder="Поиск" required>
+                        </div>
+                        
+                    </div>
+                    <div class="bell">
+                        <span class="iconify" data-icon="solar:bell-broken" style="color: #6f6f6f;"></span>
+                    </div>
+                    <div class="music">
+                        <audio controls src="../audio/music.mp3" id="player">
+                            <a href="../audio/music.mp3"> Download audio </a>
+                        </audio>
+                    </div>
+                    <div class="apps">
+                        <img src="../img/apps1.png" alt="#">
+                    </div>
+                    <div class="prof_photo">
+                        <img src="../img/friends/durov.png" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="main_size">
+                <div class="leftbar">
+                    <div class="leftbar_bar">
+                        <li><a href="../index.html"><span class="iconify" data-icon="iconamoon:profile-circle-bold"        ></span>Моя страница</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="iconamoon:news-bold"                  ></span>Новости</a></li>
+                        <li><a href="#" class="left_bar_message"><span class="iconify" data-icon="majesticons:chat-line"                ></span>Мессенджер <div class="left_bar_new__message">1</div></a></li>
+                        <li><a href="#"><span class="iconify" data-icon="ph:phone-bold"                        ></span>Звонки</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="fluent:people-12-regular"             ></span>Друзья</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="grommet-icons:group"                  ></span>Сообщества</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="mingcute:pic-2-fill"                  ></span>Фотографии</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="material-symbols:music-video-outline" ></span>Музыка</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="octicon:video-16"                     ></span>Видео</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="akar-icons:victory-hand"              ></span>Клипы</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="icon-park-outline:game-three"         ></span>Игры</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="fa6-regular:face-smile"               ></span>Стикеры</a></li>
+                        <li><a href="#"><span class="iconify" data-icon="icon-park-outline:weixin-market"      ></span>Маркет</a></li>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="info_middle">
+                        <div class="info_middle-left">
+                            <div class="sms_bar_upper">
+                                <div class="bar_upper">
+                                    <div class="upper_left">
+                                        <div class="backICON"><iconify-icon icon="ep:arrow-left"></iconify-icon></div>
+                                        <div class="backText"><p>Назад</p></div>
+                                    </div>
+                                    <div class="upper_name">
+                                        <a><b>Паруйр Саргсян</b></a>
+                                        <p>Был в сети вчера в 22:03</p>
+                                    </div>
+                                    <div class="bar_upper_right">
+                                        <div class="iconTelephone"><iconify-icon icon="mdi:telephone"></iconify-icon></div>
+                                        <div class="iconThreePoint"><iconify-icon icon="uiw:more"></iconify-icon></div>
+                                        <div class="profilePhoto">
+                                            <div class="sms_prof_photo">
+                                                <img src="../img/gf.png" alt="#">
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div id="sms_bar_view">
+
+                                <div class="sms">
+                                    <img src="../img/gf.png" alt="">
+                                    <div class="sms_bar_info">
+                                        <a href="#profileName"><b>Паруйр</b></a>
+                                        <div id="sms_bar_sms">
+                                            <p>Здаров, братан</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sms">
+                                    <img src="../img/gf.png" alt="">
+                                    <div class="sms_bar_info">
+                                        <a href="#profileName"><b>Паруйр</b></a>
+                                        <div id="sms_bar_sms">
+                                            <p>Бро перейди по ссылке чтобы взглянуть на мой проект! <a href="../thegodfatherpage/index.html">https://sargsian.ru/thegoodfatherpage/index.html</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="sms_bar_sendMessage">
+                                <div class="sms_send_zakrep">
+                                    <iconify-icon icon="ant-design:paper-clip-outlined"></iconify-icon>
+                                </div>
+                                <div class="sms_input">
+                                    <div class="input_ramka">
+                                        <input id="smska" type="text" placeholder="Напишите сообщение...">
+                                        <div class="input_right">
+                                            <iconify-icon icon="lucide:camera"></iconify-icon>
+                                            <iconify-icon icon="bx:smile"></iconify-icon>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="sms_micro" onclick="addSMS()"><iconify-icon icon="fe:paper-plane"></iconify-icon></div>
+                            </div>
+
+                        </div>
+
+                        <div class="info_middle_right">
+                            <div class="info_middle_right_sms">
+                                <a class="chat" href="#">Все чаты</a>
+                            </div>
+                            <div class="info_middle_right_sms">
+                                <a class="chat" href="#">Непрочитанные</a>
+                            </div>
+                            <div class="line"></div>
+                            <div class="info_middle_right_sms">
+                                <a class="chat" href="#">Избранное</a>
+                            </div>
+                            <div class="info_middle_right_sms">
+                                <a class="chat" href="#">Павел Дуров</a>
+                            </div>
+                            <div class="info_middle_right_sms1">
+                                <a class="chat" href="#">Паруйр Саргсян</a>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <script defer src="js/app.js" ></script>
+</body>
+</html>
